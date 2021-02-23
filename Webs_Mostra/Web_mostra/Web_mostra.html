@@ -1,0 +1,372 @@
+<html style="background-color: black;">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet">
+
+<title>Viajes</title>
+
+
+</head>
+<style>
+  a:hover{
+  text-decoration: none;
+  font-size: 25px;
+  padding: 20px;
+  display:inline-block;
+  background-color: #111;
+   
+  
+}
+body{
+   width: 99%;
+}
+/*Scroll cosas*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background:grey; 
+}
+.parallax1 {
+  /* imatge */
+  background-image:url("house.jpg");
+
+  height: 100%;
+
+  /* Efecto parallax*/
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax2 {
+  /* imatge */
+  background-image:url("Puerto.jpg");
+
+  min-height: 590px; 
+
+  /* Efecto parallax*/
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Menú */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.imagen1:hover{
+  transform: rotate(180deg);
+  transition: 0.4s;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 25px;}
+}
+
+.menu{
+  text-align: center;
+  margin: 10px;
+}
+
+.menu li{
+  display: inline-block;
+  text-align: center;
+
+
+}
+
+.menu li a{
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: #111;
+  padding: 10px;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  border-radius: 0%;
+
+
+
+}
+
+div a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  display:inline-block;
+  transition-property: width;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+  transition-delay: 1s;
+  transition: width 2s, height 2s, transform 2s;
+  transition: 0.3s;
+  
+}
+
+ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+ul li {display: inline-block;}
+ul li:hover {background:rgba(255, 255, 255, 0.26);}
+ul li:hover ul {display: block;}
+ul li ul {
+  position: absolute;
+  width: 200px;
+  display: none;
+}
+ul li ul li { 
+  background: rgba(0, 0, 0, 0.6); 
+  display: block; 
+}
+ul li ul li a {display:block !important;} 
+ul li ul li:hover {background:rgba(0, 0, 0, 0);}
+
+
+.container img {vertical-align: middle;}
+
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); 
+  background: rgba(0, 0, 0, 0.5); 
+  color: #f1f1f1;
+  width: 96%;
+  padding: 20px;
+}
+
+/* Producto */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 450px;
+  margin: 20px;
+  text-align: center;
+  font-family: 'Spectral', serif;
+
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: grey;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+/*Animación botón*/
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  
+}
+
+.button:hover span {
+  padding-right: 25px;
+  
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+  
+}
+
+
+
+</style>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+<body style="font-family: 'Spectral', serif;">
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+    <div id="Menú" width="100%" style="padding-top: 0;  background-color:rgb(43, 43, 43);">
+        <table >
+            <tr>
+                <td>
+                    <div id="Botó 1"> 
+                        <div  id="Botón" align="center"> 
+                           <span style="font-size:30px;cursor:pointer" onclick="openNav()"><img class="imagen1" src="lista.svg"  style="width: 30px;padding: 20px;"alt=""> </span>
+                        </div>
+                    </div>
+                    
+                
+                </td>
+                <td>
+                    <div id="Botó 2"> 
+                        <div  id="Botón" align="center" > 
+                            
+    
+    
+        </table>
+        
+    </div>
+
+    <div class="parallax1" ></div>
+    
+
+    <div class="container">
+      <div class="content">
+        <h1>Heading</h1>
+        <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+      </div>
+    </div>
+
+    <div class="Texto" style="background-color: black;color: white;padding: 20px; margin: 0px;">
+    <table>
+
+        <tr>
+            <td >
+
+
+                <div class="card" style="background-color: white">
+                  <img src="Vegas.jpg" alt="" style="width:100%">
+                  <h1>Las Vegas</h1>
+                  <p class="price">$1999.99</p>
+                  <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+                  <p><button class="button" style="font-family: 'Spectral', serif;"><span>Ver más </span></button></p>
+                </div>
+
+            </td>
+            <td>
+
+
+                <div class="card" style="background-color: white">
+                  <img src="París.jpg" alt="" style="width:100%">
+                  <h1>París</h1>
+                  <p class="price">$1999.99</p>
+                  <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+                  <p><button class="button" style="font-family: 'Spectral', serif;"><span>Ver más </span></button></p>
+                </div>
+ 
+            </td>
+            <td>
+
+
+                <div class="card" style="background-color: white">
+                  <img src="EEUU.jpg" alt="" style="width:100%">
+                  <h1>San Francisco</h1>
+                  <p class="price">$1999.99</p>
+                  <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+                  <p><button class="button" style="font-family: 'Spectral', serif;"><span>Ver más </span></button></p>
+                </div>
+
+            </td>
+            <td>
+
+
+                <div class="card" style="background-color: white">
+                  <img src="Japán.jpg" alt="" style="width:100%">
+                  <h1>Japan</h1>
+                  <p class="price">$1999.99</p>
+                  <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+                  <p><button class="button" style="font-family: 'Spectral', serif;"> <span>Ver más</span></button></p>
+                </div>
+
+            </td>
+        </tr>
+    </table>
+
+
+     
+
+    </div>
+    <div class="parallax2" ></div>
+    
+
+</body>
+</html>

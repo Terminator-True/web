@@ -1,0 +1,77 @@
+
+Porsche{
+  margin-left: auto;
+  margin-right: auto;
+  margin: 10px;
+  top:10px;
+  width: 205px;
+  height: 205px;
+  position: sticky;
+  border: solid;
+  border-width: 3px;
+  margin-top: -12px;
+  padding-bottom:20px;
+  padding-left: 20px;
+  padding-top:20px;
+  color: black;
+  display: block;
+  display: inline-block;
+}
+
+
+coche{
+  background-color: black;
+  color: white;
+  padding: 5px;
+  margin:5px;
+
+}
+Precio{
+  padding: 5px;
+  display: list-item;
+  list-style: upper-alpha inside;
+  margin-left: 0;
+}
+Potencia{
+  padding: 5px;
+  display: list-item;
+  list-style: upper-alpha inside;
+  margin-left: 0;
+}
+Aceleracion{
+  padding: 5px;
+  display: list-item;
+  list-style: upper-alpha inside;
+  margin-left: 0
+}
+Aceleracion{
+  padding: 5px;
+  display: list-item;
+  list-style: upper-alpha inside;
+  margin-left: 0;
+}
+traccion{
+  padding: 5px;
+  display: list-item;
+  list-style: upper-alpha inside;
+  margin-left: 0;
+}
+motor{
+  padding: 5px;
+  display: list-item;
+  list-style: upper-alpha inside;
+  margin-left: 0;
+}
+uso_combustible{
+  padding: 5px;
+  display: list-item;
+  list-style: upper-alpha inside;
+  margin-left: 0;
+}
+autonomia{
+  padding: 5px;
+  display: list-item;
+  list-style: upper-alpha inside;
+  margin-left: 0;
+  background-image: href="model7.png";
+}

@@ -1,0 +1,266 @@
+<!DOCTYPE html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    
+div a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  display:inline-block;
+  
+}
+ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+ul li {display: inline-block;}
+ul li:hover {background: #555;}
+ul li:hover ul {display: block;}
+ul li ul {
+  position: absolute;
+  width: 200px;
+  display: none;
+}
+ul li ul li { 
+  background: #555; 
+  display: block; 
+}
+ul li ul li a {display:block !important;} 
+ul li ul li:hover {background: #666;}
+
+a:hover{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  padding: 20px;
+  display:inline-block;
+  background-color: #555;
+}
+.container{
+  margin: auto;
+  background-color: white;
+  width: 1000px;
+  padding: 10px;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul.slider{
+  position: relative;
+  width: 1000px;
+  height: 300px;
+}
+
+ul.slider li {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+    background:#fff;
+}
+
+ul.slider li img{
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+ul.slider li:first-child {
+    opacity: 1; /*Mostramos el primer <li>*/
+}
+
+ul.slider li:target {
+    opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
+}
+
+.menu{
+  text-align: center;
+  margin: 20px;
+}
+
+.menu li{
+  display: inline-block;
+  text-align: center;
+}
+
+.menu li a{
+  display: inline-block;
+  color: grey;
+  text-decoration: none;
+  background-color: white;
+  padding: 10px;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  position: relative;;
+
+}
+</style>
+
+</head>
+
+
+<body style="background-color: black;padding:0px" >
+    
+
+<div id="Menú" width="100%" style="padding-top: 0;">
+    <table >
+        <tr>
+            <td>
+                <div id="Botó 1"> 
+                    <div  id="Botón" align="center"> 
+                       <img src="Porsche-logo-01.png" width="50px"alt="" style="padding:20px">
+                    </div>
+                </div>
+                
+            
+            </td>
+            <td>
+                <div id="Botó 2"> 
+                    <div  id="Botón" align="center" > 
+                        <a  href="#MODELS" class="Botón2">Modelos</a>
+                    
+                    </div>
+                </div>
+
+            </td>
+
+            <td>
+                <div id="Botó 3"> 
+                    <div  id="Botón" align="center" > 
+                        <a class="Botón3" href="#CONTACT">Contacto</a>
+                    
+                    </div>
+                </div>
+
+            </td>
+            <td> 
+                <div>
+                    <ul>
+                      <li>
+                        <a href="#">Vehiclulos</a>
+                        <ul>
+                          <li><a href="Vista_modelos_Cayman.html">718</a></li>
+                          <li><a href="Vista_modelos_911.html">911</a></li>
+                          <li><a href="Vista_modelos_Tycan.html">Tycan</a></li>
+                          <li><a href="Vista_modelos_panamera.html">Panamera</a></li>
+                      </li>
+                    </ul>
+                  </div>
+
+    </table>
+
+</div>
+<div id="Imagen" width="100%">
+    <img src="Cayman_model1.jpg" height="100%" width="100%" alt="">
+
+</div>
+<div id="Cuerpo" style="background-color:white; padding: 20px;" >
+    <h1 align="center">CARACTERÍSTICAS</h1>
+    <hr>
+   <h1>718 Cayman</h1>
+   <h2>Desde EUR 65.428,00 PVP Recomendado</h2> 
+
+   <table style="padding:0px" >
+        <tr>  
+            <td>
+                <hr>
+                <h2>220 kW/300 CV</h2>
+                <h4 style="color:grey;">Potencia máxima motor de combustión (KW)/</h4>
+                <h4 style="color:grey;">Potencia máxima motor de combustión (CV)</h4>
+                
+            </td>
+            <td>
+                <h2>5,1 s</h2>
+                <h4 style="color: grey;">Aceleración 0-100 Km/h</h4>
+            </td>
+            <td>
+                <h2>4,2 s</h2>
+                <h4 style="color: grey;">Aceleración 0-100 km/h con Paquete Sport Chrono </h4>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <hr>
+                <h2>Tracción trasera</h2>
+            </td>
+            <td>
+                <img src="Gasolina_ico.svg" style=" width: 30px; "alt="">
+            </td>
+            <td>
+                <h2>9,7-8,9</h2>
+                <h4 style="color: grey;">L/100 km</h4>
+            </td>
+        </tr>
+   </table>
+   <h1 align="center">GALERÍA</h1>
+   <div class="container" >
+  
+    <ul class="slider">
+      <li id="slide1">
+        <img src="cayman_model5.jpg"/>
+      </li>
+      <li id="slide2">
+        <img src="cayman_interior.jpg"/>
+      </li>
+      <li id="slide3">
+        <img src="cayman_model2.jpg" alt="">
+      </li>
+    </ul>
+    
+    <ul class="menu">
+      <li>
+        <a href="#slide1">·</a>
+      </li>
+      <li>
+        <a href="#slide2">·</a>
+      </li>
+       <li>
+        <a href="#slide3">·</a>
+      </li>
+    </ul>
+    <div style="padding:20px; padding-bottom:600px"></div>
+  </div>
+</div>
+
+<div style="padding:20px; padding-bottom:30px"></div>
+
+<div id="Footer" style="background-color:grey;color:white;width: 100%;" align="center">
+    <table>
+      
+        <tr>
+            <td colspan="4"> <div style="padding:20px; padding-bottom:30px"></div> </td>
+
+        </tr>
+        <tr>
+            <td colspan="4"> <hr width="100%"> </div> </td>
+
+        </tr>
+        
+        <tr style="color:white">
+            <td colspan="4" align="center">© 2020 Porsche  | Todos los derechos reservados</td>
+        </tr>
+
+        <tr style="color:white">
+            <td colspan="4" align="center">
+                Nuestro correo electrónico : info@correo.com
+            </td>
+        </tr>
+
+    </table>
+    
+    <div style="padding:20px; padding-bottom:30px"></div>  
+
+</div>

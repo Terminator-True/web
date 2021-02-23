@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="concesionario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Modelo">
+      </xs:sequence>
+      <xs:attribute name="category" use="required" type="xs:"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Modelo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Porsche">
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Porsche">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="características">
+      </xs:sequence>
+      <xs:attribute name="category" use="required" type="xs:NMTOKEN"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="características">
+    <xs:complexType>
+      <xs:sequence>
+      <xs:element ref="coche"/>
+      <xs:element ref="Precio"/>
+      <xs:element ref="Potencia"/>
+      <xs:element ref="Aceleracion"/>
+      <xs:element ref="traccion"/>
+      <xs:element ref="motor"/>
+      <xs:element ref="uso_combustible"/>
+      <xs:element ref="autonomia"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element ref="coche" type="xs:string" />
+  <xs:element ref="Precio" type="xs:string"/>
+  <xs:element ref="Potencia" type="xs:string"/>
+  <xs:element ref="Aceleracion" type="xs:string"/>
+  <xs:element ref="traccion" type="xs:string"/>
+  <xs:element ref="motor" type="xs:string"/>
+  <xs:element ref="uso_combustible" type="xs:string"/>
+  <xs:element ref="autonomia" type="xs:string"/>

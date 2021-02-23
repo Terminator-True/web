@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE concesionario [
+<!ELEMENT concesionario (Modelo)>
+  <!ATTLIST concesionario category NMTOKEN #REQUIRED>
+  <!ELEMENT Modelo (Porsche)+>
+    <!ATTLIST concesionario category NMTOKEN #REQUIRED>
+    <!ELEMENT Porsche (Caracteristicas)>
+      <!ATTLIST concesionario category NMTOKEN #REQUIRED>
+      <!ELEMENT  Caracteristicas (coche,Precio,Potencia,Aceleracion,traccion,motor,uso_combustible,autonomia?)>
+        <!ELEMENT coche (#PCDATA)>
+        <!ELEMENT Precio (#PCDATA)>
+        <!ELEMENT Potencia (#PCDATA)>
+        <!ELEMENT Aceleracion (#PCDATA)>
+        <!ELEMENT traccion (#PCDATA)>
+        <!ELEMENT motor (#PCDATA)>
+        <!ELEMENT uso_combustible (#PCDATA)>
+        <!ELEMENT autonomia (#PCDATA)>
+]>
+<?xml-stylesheet href="Projecte_Xml.css"?>
+
+<concesionario category="Porsche">
+  <Modelo>
+    <Porsche category="Cayman">
+      <Caracteristicas>
+        <coche>718-Cayman</coche>
+        <Precio> 65.428,00€</Precio>
+        <Potencia>220Kw/300CV</Potencia>
+        <Aceleracion> 5,1 s 0-100KM/h</Aceleracion>
+        <traccion>trasera</traccion>
+        <motor> gasolina </motor>
+        <uso_combustible>9,7-8,9 L/100Km </uso_combustible>
+      </Caracteristicas>
+    </Porsche>
+    <Porsche category="911">
+      <Caracteristicas>
+        <coche>911-Carrera</coche>
+        <Precio> 122.358,00€</Precio>
+        <Potencia>283Kw/385CV</Potencia>
+        <Aceleracion> 4,2 s 0-100KM/h</Aceleracion>
+        <traccion>trasera</traccion>
+        <motor> gasolina </motor>
+        <uso_combustible>9,4 L/100Km </uso_combustible>
+      </Caracteristicas>
+    </Porsche>
+    <Porsche category="Tycan_Turbo_S">
+      <Caracteristicas>
+        <coche>Tycan_Turbo_S</coche>
+        <Precio> 190.254,00€</Precio>
+        <Potencia>390Kw/761CV</Potencia>
+        <Aceleracion> 2,8 s 0-100KM/h</Aceleracion>
+        <traccion>trasera</traccion>
+        <motor> electrico </motor>
+        <uso_combustible>28,5Kwh/100Km </uso_combustible>
+        <autonomia>305Km</autonomia>
+      </Caracteristicas>
+    </Porsche>
+    <Porsche category="Panamera">
+      <Caracteristicas>
+        <coche>Panamera</coche>
+        <Precio> 108.339,00€</Precio>
+        <Potencia>243Kw/330CV</Potencia>
+        <Aceleracion> 5,6 s 0-100KM/h</Aceleracion>
+        <traccion>trasera</traccion>
+        <motor> gasolina </motor>
+        <uso_combustible>11,04-10,2 L/100Km </uso_combustible>
+      </Caracteristicas>
+    </Porsche>
+  </Modelo>
+</concesionario>
